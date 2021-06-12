@@ -4,19 +4,13 @@
 script/source = "extends Button
 
 
-# Declare member variables here. Examples:
-# var a = 2
-# var b = \"text\"
 
-
-# Called when the node enters the scene tree for the first time.
 func _ready():
-	pass # Replace with function body.
+	pass
 
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-#func _process(delta):
-#	pass
+func _pressed():
+	Auto._change_scene(\"res://Scenes/Levels/001.tscn\")
+	get_parent().hide()
 "
 
 [node name="Main_Menu" type="Control"]
@@ -26,10 +20,13 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Button" type="Button" parent="."]
+[node name="Start" type="Button" parent="."]
 margin_left = 384.0
 margin_top = 192.0
 margin_right = 640.0
 margin_bottom = 320.0
 text = "Start"
 script = SubResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
