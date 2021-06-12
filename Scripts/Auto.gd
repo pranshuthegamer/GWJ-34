@@ -1,7 +1,8 @@
 extends Node
 
 func _enter_tree():
-	_add_ui("res://Scenes/UI/Main_Menu.tscn")
+	if get_node_or_null("/root/Main") != null:
+		_add_ui("res://Scenes/UI/Main_Menu.tscn")
 
 
 onready var Main = $"/root/Main"
